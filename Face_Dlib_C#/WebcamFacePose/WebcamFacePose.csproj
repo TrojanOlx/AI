@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DlibDotNet" Version="19.16.0.20190122" />
+    <PackageReference Include="DlibDotNet-WithCUDA" Version="19.16.0.20190122" />
+    <PackageReference Include="OpenCvSharp4" Version="4.0.0.20190108" />
+    <PackageReference Include="OpenCvSharp4.runtime.ubuntu.18.04-x64" Version="4.0.0.20181225" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DlibDotNet" Version="19.16.0.20190122" />
+    <PackageReference Include="DlibDotNet-WithCUDA" Version="19.16.0.20190122" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.7.0" />
+    <PackageReference Include="NNSharp" Version="1.2.1" />
+    <PackageReference Include="OpenCvSharp4" Version="4.0.0.20190108" />
+    <PackageReference Include="OpenCvSharp4.runtime.ubuntu.18.04-x64" Version="4.0.0.20181225" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DlibCore.Computer\DlibCore.Computer.csproj" />
+    <ProjectReference Include="..\FaceDlib.Core.Common\FaceDlib.Core.Common.csproj" />
+    <ProjectReference Include="..\FaceDlib.Core.Models\FaceDlib.Core.Models.csproj" />
+    <ProjectReference Include="..\FaceDlib.Core.Service\FaceDlib.Core.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\PresentationCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="C:\Users\MyPC\.nuget\packages\dlibdotnet\19.15.0.20181008\build\\..\NativeDlls\DlibDotNet.Native.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="C:\Users\MyPC\.nuget\packages\dlibdotnet\19.15.0.20181008\build\\..\NativeDlls\DlibDotNet.Native.Dnn.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

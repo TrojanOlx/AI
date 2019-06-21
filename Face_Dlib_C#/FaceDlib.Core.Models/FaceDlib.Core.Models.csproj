@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="DlibDotNet" Version="19.16.0.20190122" />
+    <PackageReference Include="DlibDotNet-WithCUDA" Version="19.16.0.20190122" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ShapeModel\dlib_face_recognition_resnet_model_v1.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ShapeModel\shape_predictor_5_face_landmarks.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ShapeModel\shape_predictor_68_face_landmarks.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
