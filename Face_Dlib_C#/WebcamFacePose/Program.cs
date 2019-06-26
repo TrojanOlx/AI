@@ -13,7 +13,8 @@ namespace WebcamFacePose
             try
             {
                 //var cap = new VideoCapture(0);
-                var cap = new VideoCapture("https://js.live-play.acgvideo.com/live-js/890069/live_30947419_1716018.flv?wsSecret=2cee8a379a871fa8dbf714ba9d16e8a4&wsTime=1548240723&trid=4f64a0ae5e2444938cfdd109a54c6e1c&sig=no&platform=web&pSession=yR3bsQk1-SCY4-4QGi-K7EG-AsbTiwbX7tZF");
+                //var cap = new VideoCapture("https://js.live-play.acgvideo.com/live-js/890069/live_30947419_1716018.flv?wsSecret=2cee8a379a871fa8dbf714ba9d16e8a4&wsTime=1548240723&trid=4f64a0ae5e2444938cfdd109a54c6e1c&sig=no&platform=web&pSession=yR3bsQk1-SCY4-4QGi-K7EG-AsbTiwbX7tZF");
+                var cap = new VideoCapture(0);
                 if (!cap.IsOpened())
                 {
                     Console.WriteLine("Unable to connect to camera");
